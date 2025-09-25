@@ -4,7 +4,6 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class encoders {
     DcMotor ency1, ency2, encx1;
-    boolean doesThisWork;
     public encoders(HardwareMap hwMap) {
         ency2 = hwMap.get(DcMotor.class, "motor1");
         encx1 = hwMap.get(DcMotor.class, "motor2");
