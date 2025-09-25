@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 @TeleOp
 public class main extends LinearOpMode {
-    boolean doesThisWork;
+
     @Override
     public void runOpMode() {
         encoders encoders = new encoders(hardwareMap);
