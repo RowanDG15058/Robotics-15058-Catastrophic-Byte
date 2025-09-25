@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class encoders {
     DcMotor ency1, ency2, encx1;
+    boolean doesThisWork;
     public encoders(HardwareMap hwMap) {
         ency2 = hwMap.get(DcMotor.class, "motor1");
         encx1 = hwMap.get(DcMotor.class, "motor2");
@@ -32,8 +33,8 @@ public class encoders {
     }
     private double ticksToDistance(double ticks) {
         final int ppr = 2000;
-        final int diameter = 32;
-        double circumference = Math.PI * diameter;
+        final int radius = 16;
+        double circumference = 2 * Math.PI * radius;
         double revolutions = ticks / ppr;
         return circumference * revolutions;
     }
